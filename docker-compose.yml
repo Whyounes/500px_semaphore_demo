@@ -1,7 +1,18 @@
-server:
-  image: younesrafie/apache-php:v0.1
+web:
+  build: .
+  command: 'bash -c ''vendor/bin/heroku-php-apache2 public/'''
+  working_dir: /app/user
+  environment:
+    PORT: 8080
   ports:
-    - "80:80"
-    - "443:443"
+    - '8080:8080'
+shell:
+  build: .
+  command: bash
+  working_dir: /app/user
+  environment:
+    PORT: 8080
+  ports:
+    - '8080:8080'
   volumes:
-    - .:/var/www
+    - '.:/app/user'
