@@ -1,6 +1,6 @@
 web:
   build: .
-  command: 'bash -c ''vendor/bin/heroku-php-apache2 public/'''
+  command: 'bash -c ''vendor/bin/heroku-php-apache2 /app/public/'''
   working_dir: /app
   volumes:
     - '.:/app'
