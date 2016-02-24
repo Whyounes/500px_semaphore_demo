@@ -1,18 +1,13 @@
 web:
   build: .
   command: 'bash -c ''vendor/bin/heroku-php-apache2 public/'''
-  working_dir: /app/user
-  environment:
-    PORT: 8080
-  ports:
-    - '8080:8080'
-shell:
-  build: .
-  command: bash
-  working_dir: /app/user
-  environment:
-    PORT: 8080
-  ports:
-    - '8080:8080'
+  working_dir: /app
   volumes:
-    - '.:/app/user'
+    - '.:/app'
+  environment:
+    PORT: 8080
+  ports:
+    - '8080:8080'
+    - '443:443'
+shell:
+  command: bash
