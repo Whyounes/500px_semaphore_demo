@@ -1,5 +1,5 @@
 {
   "name": "500px Semaphore demo",
   "description": "Just a demo app",
-  "image": "heroku/php"
+  "image": "nimmis/apache-php5"
 }

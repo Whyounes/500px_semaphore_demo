@@ -1,1 +1,1 @@
-FROM heroku/php
+FROM nimmis/apache-php5
