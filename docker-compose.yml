@@ -10,4 +10,5 @@ web:
     - '8080:8080'
     - '443:443'
 shell:
+  build: .
   command: bash
